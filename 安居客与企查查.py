@@ -50,11 +50,11 @@ def ajk_data():
     # 企业列表UA伪装
     company_list_headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
-        'cookie' : 'qcc_did=3bc29edc-d3e1-4a5b-9440-8739aabdfaf9; UM_distinctid=183162b782e17-06504d20da89a2-26021a51-1fa400-183162b782f18b4; acw_tc=77939ca316669237455222560efaf442b7ba1bb84ce50e9928e223a32b; CNZZDATA1254842228=349021138-1662523178-https%3A%2F%2Fwww.baidu.com%2F|1666923716; QCCSESSID=837663610f9b46ca5b4f315f32'
+        'cookie' :  'qcc_did=3bc29edc-d3e1-4a5b-9440-8739aabdfaf9; UM_distinctid=183162b782e17-06504d20da89a2-26021a51-1fa400-183162b782f18b4; acw_tc=670f632116669899419044432e16253572ee9d8df6f6f8482277224da4; CNZZDATA1254842228=349021138-1662523178-https%3A%2F%2Fwww.baidu.com%2F|1666988529; QCCSESSID=98a8365ce34d528dc7ad6d4779'
     }
 
 
-    for page in range(7, 51):
+    for page in range(47, 51):
             try:
                 # 烟台安居客二手房列表
                 ajk_list_url = f'https://yt.anjuke.com/community/p{page}/'
@@ -124,7 +124,7 @@ def ajk_data():
                                    # 物业电话
                                    property_tel
                                    ])
-                        wb.save("test1.xlsx")
+                        wb.save("test4.xlsx")
                         random_sleep(4, 1)
                         print('分区')
                         print(div.css('.split-line+span::text').get())
